@@ -1,0 +1,638 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><title>Timber &amp; Young · Kids' Woodworking Classes in Virginia Beach</title><meta name="description" content="Hands-on woodworking classes for ages 4–18 in Virginia Beach. Real tools, CPR-certified instructors, take-home projects. Classes start Nov 6."><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23E3C996'/%3E%3Cg fill='none' stroke='%233A2A10' stroke-width='2'%3E%3Cellipse cx='16' cy='16' rx='11' ry='8'/%3E%3Cellipse cx='16' cy='16' rx='6.5' ry='4.5'/%3E%3Cellipse cx='16' cy='16' rx='2.5' ry='1.7'/%3E%3C/g%3E%3C/svg%3E"><link rel="canonical" href="https://troyalexaguirre.github.io/timber-and-young/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Timber &amp; Young"><meta property="og:title" content="Timber &amp; Young · Kids' Woodworking Classes in Virginia Beach"><meta property="og:description" content="Hands-on woodworking classes for ages 4–18 in Virginia Beach. Real tools, CPR-certified instructors, take-home projects. Classes start Nov 6."><meta property="og:url" content="https://troyalexaguirre.github.io/timber-and-young/"><meta property="og:image" content="https://troyalexaguirre.github.io/timber-and-young/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://troyalexaguirre.github.io/timber-and-young/og.png"><meta name="theme-color" content="#23402F"></head><body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Layout: a workbench page. Full-width bands, a tape-measure ruler as the hour timeline, class "tickets" in a 2x2 grid. */
+:root{
+  --bg:#F2F4EE; --surface:#FFFFFF; --ink:#1D2B22; --muted:#56655B; --line:#CBD3C6;
+  --pine:#23402F; --pine-ink:#F2F4EE; --clamp:#D9531E; --clamp-ink:#FFFFFF; --ply:#E3C996; --ply-ink:#3A2A10;
+  --display:"Bricolage Grotesque", "Arial Rounded MT Bold", system-ui, sans-serif;
+  --body:"Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --radius:10px; --ticket-ink:#111111;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#141B16; --surface:#1C251F; --ink:#E8EDE5; --muted:#A3B0A6; --line:#334037;
+  --pine:#0E1510; --pine-ink:#E8EDE5; --clamp:#F0733F; --clamp-ink:#1A0D06; --ply:#B89A62; --ply-ink:#1E1407; --ticket-ink:#F2F4EE; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#141B16; --surface:#1C251F; --ink:#E8EDE5; --muted:#A3B0A6; --line:#334037;
+  --pine:#0E1510; --pine-ink:#E8EDE5; --clamp:#F0733F; --clamp-ink:#1A0D06; --ply:#B89A62; --ply-ink:#1E1407; --ticket-ink:#F2F4EE; color-scheme:dark }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.05;text-wrap:balance;margin:0}
+h2{font-size:clamp(2rem,4.5vw,3.1rem);font-weight:800;letter-spacing:-.02em}
+h3{font-size:1.3rem;font-weight:700}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--clamp)}
+.lede{color:var(--muted);max-width:60ch;font-size:1.08rem}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--clamp);outline-offset:3px;border-radius:4px}
+section{padding-block:clamp(56px,8vw,96px)}
+.head{display:grid;gap:14px;margin-bottom:36px}
+
+/* Header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:20px;padding-block:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo b{font-family:var(--display);font-weight:800;font-size:1.25rem;letter-spacing:-.02em}
+.logo small{display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+.knot{width:34px;height:34px;border-radius:50%;background:var(--ply);display:grid;place-items:center;flex:none}
+nav{display:flex;gap:22px;margin-left:auto}
+nav a{text-decoration:none;font-size:.95rem;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--body);font-weight:700;font-size:1rem;padding:12px 20px;border-radius:999px;border:2px solid var(--ink);text-decoration:none;cursor:pointer;background:transparent;color:var(--ink)}
+.btn.go{background:var(--clamp);border-color:var(--clamp);color:var(--clamp-ink)}
+.btn.big{font-size:1.1rem;padding:15px 28px;box-shadow:0 8px 22px color-mix(in srgb, var(--clamp) 38%, transparent)}
+.enroll{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--pine);background:color-mix(in srgb, var(--clamp) 12%, var(--surface));border:1.5px solid color-mix(in srgb, var(--clamp) 45%, transparent);border-radius:999px;padding:7px 14px}
+.enroll i{width:9px;height:9px;border-radius:50%;background:var(--clamp);box-shadow:0 0 0 0 var(--clamp);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb, var(--clamp) 60%, transparent)}70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
+@media (prefers-reduced-motion: reduce){.enroll i{animation:none}}
+.mobile-cta{display:none}
+@media (max-width:880px){.mobile-cta{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:20;justify-content:center;align-items:center;gap:8px;background:var(--clamp);color:var(--clamp-ink);font-weight:700;text-decoration:none;padding:14px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)}body{padding-bottom:84px}}
+.btn:hover{transform:translateY(-1px)}
+.menu{display:none}
+@media (max-width:880px){
+  nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+  nav.open{display:flex}
+  nav a{padding-block:12px;border-top:1px solid var(--line)}
+  .menu{display:inline-flex;margin-left:auto;padding:8px 14px}
+  .bar .btn.go{display:none}
+}
+
+/* Hero */
+.hero{padding-block:clamp(48px,7vw,88px) clamp(40px,6vw,72px)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.8rem,7.4vw,5.6rem);font-weight:800;letter-spacing:-.035em;margin-block:14px 20px}
+.hero h1 em{font-style:normal;color:var(--clamp)}
+.hero .lede{font-size:1.2rem}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.checks{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:22px;font-weight:700;font-size:.95rem}
+.checks span::before{content:"✓ ";color:var(--clamp)}
+.plank{background:var(--ply);color:var(--ply-ink);border-radius:var(--radius);padding:28px;position:relative;overflow:hidden;min-width:0}
+.plank::before{content:"";position:absolute;inset:0;opacity:.18;background:repeating-radial-gradient(ellipse at 20% 120%, transparent 0 14px, currentColor 15px 16px)}
+.plank>*{position:relative}
+.plank .big{font-family:var(--display);font-weight:800;font-size:clamp(2rem,4.4vw,3.2rem);line-height:.95;letter-spacing:-.03em}
+.plank .stamp{font-family:var(--mono);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;margin-top:18px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:26px}
+.facts span{background:var(--surface);color:var(--ink);border-radius:6px;padding:10px 12px;font-weight:700;font-size:.92rem}
+@media (max-width:820px){.hero-grid{grid-template-columns:1fr}}
+
+/* Bands */
+.band-pine{background:var(--pine);color:var(--pine-ink)}
+.band-pine .lede{color:color-mix(in srgb, var(--pine-ink) 75%, transparent)}
+.band-pine .note{color:color-mix(in srgb, var(--pine-ink) 82%, transparent)}
+
+/* Classes */
+.classes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media (max-width:720px){.classes{grid-template-columns:1fr}}
+.ticket{background:var(--surface);color:var(--ticket-ink);border:1px solid var(--line);border-radius:var(--radius);display:flex;flex-direction:column;min-width:0}
+.ticket-body{flex:1}
+.ticket-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:22px 22px 0}
+.ages{font-family:var(--mono);font-weight:700;font-size:.8rem;letter-spacing:.08em;background:var(--ply);color:var(--ply-ink);padding:4px 10px;border-radius:999px;white-space:nowrap}
+.price{font-family:var(--display);font-weight:800;font-size:1.8rem;font-variant-numeric:tabular-nums}
+.price small{font-family:var(--body);font-weight:400;font-size:.85rem;color:var(--muted)}
+.ticket-body{padding:14px 22px 18px;display:grid;gap:10px;align-content:start}
+.ticket-body p{color:var(--muted);font-size:.98rem}
+.projects{font-size:.9rem;color:var(--muted)}
+.projects b{color:var(--ink)}
+.ticket-foot{border-top:2px dashed var(--line);padding:18px 22px 22px;display:grid;gap:12px}
+label{font-weight:700;font-size:.9rem;display:block;margin-bottom:6px}
+select,input,textarea{width:100%;font:inherit;font-size:1rem;padding:11px 12px;border:1.5px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+textarea{min-height:110px;resize:vertical}
+.ticket-foot .btn{justify-content:center}
+.note{font-size:.88rem;color:var(--muted);margin-top:22px;max-width:75ch}
+.note+.note{margin-top:8px}
+
+/* Weekly table */
+.weekly{margin-top:44px;overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+.weekly table{width:100%;border-collapse:collapse;min-width:520px}
+.weekly caption{text-align:left;padding:16px 18px 6px;font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.weekly th,.weekly td{padding:11px 18px;text-align:left;border-top:1px solid var(--line);font-size:.95rem}
+.weekly th{font-family:var(--mono);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.weekly td:nth-child(2){font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* Tape measure timeline */
+.tape{margin-top:8px;background:#F2C230;color:#1D1A10;border-radius:8px;position:relative;padding:0 0 4px;overflow:hidden}
+.ticks{height:34px;background-image:
+  repeating-linear-gradient(90deg,#1D1A10 0 2px,transparent 2px calc(100%/12)),
+  repeating-linear-gradient(90deg,#1D1A10 0 1px,transparent 1px calc(100%/60));
+  background-size:100% 34px,100% 14px;background-repeat:no-repeat}
+.tape-nums{display:grid;grid-template-columns:repeat(12,1fr);font-family:var(--mono);font-weight:700;font-size:.72rem;padding:2px 0 0 4px}
+.steps{display:grid;grid-template-columns:10fr 10fr 20fr 15fr 5fr;gap:0;margin-top:18px}
+.step{padding:16px 16px 0 0;border-left:3px solid var(--clamp);padding-left:14px;min-width:0}
+.step .t{font-family:var(--mono);font-weight:700;font-size:.78rem;color:var(--clamp);letter-spacing:.06em}
+.step h3{margin-block:6px;font-size:1.12rem}
+.step p{font-size:.92rem;color:color-mix(in srgb, var(--pine-ink) 75%, transparent)}
+@media (max-width:860px){.steps{grid-template-columns:1fr;gap:18px}.tape{display:none}}
+
+/* Safety */
+.safety-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+@media (max-width:820px){.safety-grid{grid-template-columns:1fr}}
+.rules{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:r}
+.rules li{counter-increment:r;display:grid;grid-template-columns:52px 1fr;gap:14px;padding-block:18px;border-top:1px solid var(--line)}
+.rules li:last-child{border-bottom:1px solid var(--line)}
+.rules li::before{content:counter(r,decimal-leading-zero);font-family:var(--mono);font-weight:700;font-size:1.1rem;color:var(--clamp)}
+.rules b{display:block;font-family:var(--display);font-size:1.15rem}
+.rules span{color:var(--muted);font-size:.97rem}
+.callout{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--clamp);border-radius:var(--radius);padding:18px 20px;margin-top:22px;font-size:.97rem}
+
+/* Benefits */
+.benefits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+@media (max-width:820px){.benefits{grid-template-columns:1fr}}
+.benefit{border-top:3px solid var(--ink);padding-top:18px;display:grid;gap:8px}
+.benefit p{color:var(--muted)}
+
+/* FAQ */
+.faq{display:grid;gap:10px;max-width:820px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:4px 20px}
+summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:1.12rem;padding-block:14px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--mono);color:var(--clamp);font-size:1.3rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{padding-bottom:18px;color:var(--muted)}
+
+/* Inquiry */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px;background:var(--surface);color:var(--ink);border-radius:var(--radius);padding:clamp(20px,4vw,36px);max-width:860px}
+.form-grid .full{grid-column:1/-1}
+@media (max-width:640px){.form-grid{grid-template-columns:1fr}}
+.req{color:var(--clamp)}
+.form-grid small{color:var(--muted);font-size:.85rem;display:block}
+.result{grid-column:1/-1;border:2px dashed var(--clamp);border-radius:8px;padding:16px;display:grid;gap:10px}
+.result pre{margin:0;white-space:pre-wrap;font-family:var(--mono);font-size:.85rem;background:var(--bg);padding:12px;border-radius:6px;overflow-x:auto}
+.err{color:var(--clamp);font-weight:700;font-size:.92rem}
+
+/* Spots left */
+.spots{display:grid;gap:6px;font-size:.92rem}
+.spots[hidden]{display:none}
+.spots .row{display:flex;justify-content:space-between;gap:10px;font-weight:700}
+.spots .row span:last-child{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--muted);font-weight:500}
+.meter{height:8px;border-radius:999px;background:var(--line);overflow:hidden}
+.meter i{display:block;height:100%;background:var(--pine);border-radius:999px}
+.spots.low .row span:first-child,.spots.full .row span:first-child{color:var(--clamp)}
+.spots.low .meter i,.spots.full .meter i{background:var(--clamp)}
+.band-pine .form-grid .spots .meter i{background:var(--pine)}
+.spots-legend{font-size:.85rem;color:var(--muted)}
+
+/* Owner panel */
+#manage{border:2px dashed var(--clamp);border-radius:var(--radius);padding:clamp(18px,3vw,28px);margin-top:40px;background:var(--surface)}
+#manage h2{font-size:1.8rem}
+.mg-class{border-top:1px solid var(--line);padding-block:18px;display:grid;gap:12px}
+.mg-head{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
+.mg-head h3{font-size:1.15rem}
+.mg-head label{display:flex;align-items:center;gap:8px;margin:0;font-weight:400}
+.mg-head input{width:76px}
+.mg-dates{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px}
+.mg-date{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--bg);border-radius:8px;padding:6px 10px;font-size:.88rem}
+.mg-date label{margin:0;font-weight:400}
+.mg-date input{width:64px;padding:6px 8px}
+.mg-bar{display:flex;flex-wrap:wrap;align-items:center;gap:12px;position:sticky;bottom:0;background:var(--surface);padding-block:14px 4px;border-top:1px solid var(--line)}
+.mg-msg{font-size:.92rem;color:var(--muted)}
+
+/* Spots left */
+.spots{display:grid;gap:6px;font-size:.92rem}
+.spots[hidden]{display:none}
+.spots-line{display:flex;justify-content:space-between;gap:10px;font-weight:700}
+.spots-line .n{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.meter{height:8px;border-radius:999px;background:var(--line);overflow:hidden}
+.meter i{display:block;height:100%;background:var(--pine);border-radius:999px;transition:width .3s}
+.spots.low .spots-line .n,.spots.low .msg{color:var(--clamp)}
+.spots.low .meter i{background:var(--clamp)}
+.spots.full .meter i{background:var(--muted)}
+.spots .msg{color:var(--muted);font-size:.85rem}
+.btn[aria-disabled="true"]{opacity:.45;pointer-events:none}
+.admin{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:.85rem;background:var(--bg);border:1px dashed var(--line);border-radius:8px;padding:8px 10px}
+.admin b{font-family:var(--mono);font-variant-numeric:tabular-nums;min-width:2ch;text-align:center}
+.admin button{font:inherit;font-weight:700;width:30px;height:30px;border-radius:6px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.admin .tag{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:auto}
+#formSpots{margin-top:8px}
+@media (prefers-reduced-motion: reduce){.meter i{transition:none}}
+
+.contact{display:grid;gap:10px;background:var(--surface);color:var(--ticket-ink);border-radius:var(--radius);padding:18px 20px;max-width:560px;margin-top:6px}
+.contact-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.contact-k{font-family:var(--mono);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);width:56px}
+.contact-v{font-weight:700;font-size:1.05rem;color:inherit;text-decoration:none;user-select:all;overflow-wrap:anywhere;min-width:0}
+.copy{font:inherit;font-size:.85rem;font-weight:700;padding:5px 12px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:inherit;cursor:pointer;margin-left:auto}
+.contact-note{font-size:.88rem;color:var(--muted)}
+
+.policies{margin-top:40px;display:grid;gap:14px;max-width:960px}
+.ontime{background:var(--surface);border:2px solid var(--clamp);border-radius:var(--radius);padding:18px 20px;display:grid;gap:6px}
+.ontime b{font-family:var(--display);font-size:1.25rem;color:var(--clamp)}
+.ontime p{max-width:75ch}
+.policy-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:820px){.policy-grid{grid-template-columns:1fr}}
+.policy{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--clamp);border-radius:var(--radius);padding:18px 20px;display:grid;gap:6px}
+.policy b{font-family:var(--display);font-size:1.12rem}
+.policy p{color:var(--muted);font-size:.95rem}
+
+.waiver{display:grid;gap:8px;background:var(--surface);color:var(--ticket-ink);border:2px dashed var(--clamp);border-radius:var(--radius);padding:16px 18px;max-width:560px;margin-top:6px}
+.waiver b{font-family:var(--display);font-size:1.08rem}
+.waiver p{font-size:.93rem;color:var(--muted)}
+.waiver-actions{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+.waiver-open{font-size:.88rem;font-weight:700;color:inherit;text-underline-offset:3px}
+.waiver-msg{font-size:.85rem;color:var(--muted)}
+.waiver-step{max-width:none;margin-top:0}
+.paylink{font-size:.9rem;font-weight:700;color:inherit;text-align:center;text-underline-offset:3px}
+.paybox{display:grid;gap:10px;justify-items:start;font-size:.9rem;color:var(--muted)}
+.packline{padding:6px 22px 0;font-size:.92rem}.packline span{color:var(--muted)}
+.paynote{font-size:.8rem;color:var(--muted);text-align:center}
+.datecopy{display:grid;gap:8px;justify-items:start;border:1.5px dashed var(--line);border-radius:8px;padding:12px;width:100%}
+.datecopy code{font-family:var(--mono);font-size:.9rem;color:var(--ink);background:var(--bg);padding:6px 10px;border-radius:6px;user-select:all;overflow-wrap:anywhere}
+.datecopy .copy{margin-left:0}
+
+.team-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:start}
+@media (max-width:820px){.team-grid{grid-template-columns:1fr;gap:20px}}
+.creds{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.creds li{font-family:var(--mono);font-size:.78rem;font-weight:700;letter-spacing:.04em;background:var(--ply);color:var(--ply-ink);padding:6px 12px;border-radius:999px}
+.bio{display:grid;gap:16px;max-width:65ch;min-width:0}
+.bio p:first-child{font-size:1.15rem}
+.sig{font-family:var(--display);font-weight:700;color:var(--clamp)}
+
+footer{border-top:1px solid var(--line);padding-block:28px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;color:var(--muted);font-size:.9rem}
+</style>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="Timber & Young home">
+      <span class="knot" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20"><g fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="10" cy="10" rx="8" ry="6"/><ellipse cx="10" cy="10" rx="5" ry="3.4"/><ellipse cx="10" cy="10" rx="2" ry="1.3"/></g></svg></span>
+      <span><b>timber &amp; young</b><small>The next generation of makers</small></span>
+    </a>
+    <nav id="nav" aria-label="Main">
+      <a href="#classes">Our classes</a><a href="#schedule">Schedule &amp; pricing</a><a href="#format">The workshop</a><a href="#safety">Safety first</a><a href="#team">Our team</a><a href="#faq">FAQs</a>
+    </nav>
+    <a class="btn go" href="#classes">Sign up →</a>
+    <button class="btn menu" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu ☰</button>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div>
+        <span class="enroll"><i aria-hidden="true"></i>Now enrolling · Classes start Fri, Nov 6 · Virginia Beach</span>
+        <h1>Small hands. Big <em>“I made that.”</em> energy.</h1>
+        <p class="lede">Real wood. Real tools. Really proud kids. Hands-on woodworking adventures for curious makers ages 4–18.</p>
+        <div class="ctas"><a class="btn go big" href="#classes">See classes &amp; sign up →</a><a class="btn" href="#schedule">Schedule &amp; prices ↓</a></div>
+        <div class="checks"><span>Ages 4–18</span><span>No experience needed</span><span>CPR-certified instructors</span><span>From $75 a class</span></div>
+      </div>
+      <div class="plank">
+        <div class="big">Little workshop.<br>Big possibilities.</div>
+        <div class="stamp">Made by hand · Kept with pride</div>
+        <div class="facts"><span>Ages 4–18</span><span>1–2 hour classes</span><span>Age-appropriate tools</span><span>Take-home creations</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="classes" class="band-pine">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Find their first (or next) project</span>
+        <h2>A place for every kind of maker.</h2>
+        <p class="lede">From their first wooden robot to a bench they can actually sit on. Skills grow with them, one proud moment at a time.</p>
+      </div>
+      <div id="schedule" class="head" style="margin-bottom:24px">
+        <span class="eyebrow">A little time. A lot to take home.</span>
+        <h3 style="font-size:1.6rem">Class schedule &amp; pricing</h3>
+        <p class="lede">Classes for ages 4–7 are 1 hour. Classes for ages 8–18 are 2 hours. Choose an age group, then select a date and time. Our first class is Friday, November 6, 2026.</p>
+      </div>
+      <div class="classes" id="classGrid"></div>
+      <p class="note">Projects are examples, adapted to each learner. Materials are prepared to fit each class; larger builds may use prepared parts or continue across sessions.</p>
+      <p class="note">Each class takes up to 20 students, and we aim to have two adults in every class. Woodworking Explorers (ages 4–7) must be able to use the restroom independently; children who need assistance are welcome when a parent or guardian stays for the full class. Pick a date to see how many spots are left. Once Troy replies that your date is open, pay in full online by card, Apple Pay, or Google Pay through Square. Your spot is secured only when payment is received.</p>
+      <p class="note" id="spotsUpdated" hidden></p>
+      <p class="note" id="ownerSave" role="status" hidden></p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="weekly">
+      <table>
+        <caption>Weekly pattern · Nov 6–Dec 31, 2026 · All times Eastern</caption>
+        <thead><tr><th>Day</th><th>Time</th><th>Class</th></tr></thead>
+        <tbody id="weeklyBody"></tbody>
+      </table>
+    </div>
+    <p class="note">No classes on Veterans Day (Wed, Nov 11), Thanksgiving weekend (Thu–Sat, Nov 26–28), Christmas (Thu–Sat, Dec 24–26), or New Year’s Eve (Thu, Dec 31). All classes are held at 5345 Virginia Beach Blvd, Virginia Beach, VA 23462.</p>
+
+    <div id="manage" hidden>
+      <div class="head" style="margin-bottom:8px">
+        <span class="eyebrow">Only you can see this</span>
+        <h2>Manage class spots</h2>
+        <p class="lede">Set each class’s size, then enter how many students are registered for each date. Parents see the spots left as soon as you save.</p>
+      </div>
+      <div id="mgList"></div>
+      <div class="mg-bar"><button class="btn go" type="button" id="mgSave">Save spots</button><span class="mg-msg" id="mgMsg" role="status"></span></div>
+    </div>
+  </div>
+
+  <section id="format" class="band-pine" style="margin-top:clamp(56px,8vw,96px)">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Less screen time. More making time.</span>
+        <h2>Every class. Something to show for it.</h2>
+        <p class="lede">Every session has a simple rhythm: get comfortable, learn a skill, make something yours. We prepare materials so kids spend their time creating, with a completed or nearly completed project to take home. The timeline below is a one-hour Explorers class; two-hour classes follow the same steps with more time to build.</p>
+      </div>
+      <div class="tape" aria-hidden="true"><div class="ticks"></div><div class="tape-nums"><span>0</span><span>5</span><span>10</span><span>15</span><span>20</span><span>25</span><span>30</span><span>35</span><span>40</span><span>45</span><span>50</span><span>55</span></div></div>
+      <div class="steps">
+        <div class="step"><span class="t">00–10 MIN</span><h3>Safety &amp; hello</h3><p>Get equipped, meet the tools, and practice the shop rules.</p></div>
+        <div class="step"><span class="t">10–20 MIN</span><h3>Learn &amp; prepare</h3><p>Watch a demonstration, measure, or sand prepared pieces.</p></div>
+        <div class="step"><span class="t">20–40 MIN</span><h3>Let’s build</h3><p>Assemble, fasten, and solve little challenges with guidance.</p></div>
+        <div class="step"><span class="t">40–55 MIN</span><h3>Make it yours</h3><p>Smooth edges, decorate, and share what you’ve learned.</p></div>
+        <div class="step"><span class="t">55–60</span><h3>Wrap &amp; tidy</h3><p>Return tools and pack up your creation.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety">
+    <div class="wrap safety-grid">
+      <div class="head">
+        <span class="eyebrow">Good habits start here</span>
+        <h2>Safety is the first thing we build.</h2>
+        <p class="lede">Confidence comes from knowing what to do, and when to ask for help. Every class starts with a safety check and a demonstration of the tools in use. Students who miss it will not be able to join the class, so please arrive on time.</p>
+        <div class="callout">For younger children, materials are pre-cut and power tools are instructor-only. Older students progress to supervised tool use only when ready, with instructor approval and a secure, clamped workpiece.</div>
+        <div class="callout"><b>CPR certified, first aid on hand.</b> Our instructors are CPR certified, and basic first aid supplies are kept on site and readily available.</div>
+      </div>
+      <ol class="rules">
+        <li><div><b>Protect your eyes.</b><span>Wear properly fitting safety glasses whenever tools are in use.</span></div></li>
+        <li><div><b>Listen first. Ask before using.</b><span>Use a tool only after the instructor explains it and gives permission.</span></div></li>
+        <li><div><b>Keep hands in the safe zone.</b><span>Clamp wood securely; keep fingers clear of cutting paths and pinch points.</span></div></li>
+        <li><div><b>Give tools and each other space.</b><span>Walk, carry tools safely, and stay focused. No horseplay in the shop.</span></div></li>
+        <li><div><b>Stop, tidy, and tell.</b><span>Put tools away, keep the bench clear, and tell an instructor if anything feels unsafe.</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><span class="eyebrow">More than something made of wood</span><h2>Useful skills. Lasting confidence.</h2></div>
+      <div class="benefits">
+        <div class="benefit"><h3>“I can figure this out.”</h3><p>Measuring, trying, adjusting. Every project makes problem-solving something they can hold in their hands.</p></div>
+        <div class="benefit"><h3>Room to be themselves.</h3><p>A color, a shape, a little unexpected detail. Shared skills leave plenty of room for individual ideas.</p></div>
+        <div class="benefit"><h3>Skills that go home.</h3><p>Care, patience, and practical know-how stay with them long after the sawdust settles.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" style="padding-top:0">
+    <div class="wrap team-grid">
+      <div class="head">
+        <span class="eyebrow">Meet the team</span>
+        <h2>Real makers. Patient teachers.</h2>
+        <ul class="creds" aria-label="Troy's background">
+          <li>Almost 20 years in wood &amp; metal</li>
+          <li>Welder by trade</li>
+          <li>Eagle Scout</li>
+          <li>CPR certified</li>
+          <li>Order of the Arrow</li>
+        </ul>
+      </div>
+      <div class="bio">
+        <p>Hi, I&rsquo;m Troy Aguirre, the founder of Timber &amp; Young. I&rsquo;ve been working with wood and metal for almost 20 years. I&rsquo;m a welder by trade, and I design and make custom builds in my own shop.</p>
+        <p>I&rsquo;m also an Eagle Scout and a member of the Order of the Arrow, Scouting&rsquo;s national honor society. Scouting taught me that the best way to learn a skill is to do it with your own hands, with someone beside you who shows you how to do it safely.</p>
+        <p>I&rsquo;ve also spent years helping teach my siblings, some of whom have disabilities. They taught me that every kid learns differently, and that with patience and the right support, every kid can build something they&rsquo;re proud of. At Timber &amp; Young, every child is welcome. If your child needs anything to feel comfortable and included, just tell us and we&rsquo;ll work it out together.</p>
+        <p>Our teachers come from like-minded backgrounds and share that belief. Every one of them wants to see your child succeed, build real skills, and grow in confidence.</p>
+        <p>I started Timber &amp; Young because I want kids to feel what I felt the first time I built something real: that &ldquo;I made that&rdquo; moment. Safety comes first, projects are matched to each child, and our goal is for every maker to go home with something to be proud of. We&rsquo;re right here in Virginia Beach, and we can&rsquo;t wait to meet your young maker.</p>
+        <p class="sig">&mdash; Troy Aguirre, founder</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><span class="eyebrow">Good questions</span><h2>A few things parents ask.</h2><p class="lede">New to woodworking? That’s exactly where many great makers start.</p></div>
+      <div class="faq">
+        <details><summary>Does my child need any experience?</summary><p>No experience is needed. The four age groups provide a starting point, and activities can be adapted to confidence, ability, and previous tool experience.</p></details>
+        <details><summary>Will younger children use power tools?</summary><p>No. Younger children’s materials are pre-cut, and power tools are instructor-only. Explorers focus on sanding, glue, clamps, decorating, and supported hand-tool use. Older groups progress only with instruction, readiness checks, and supervision.</p></details>
+        <details><summary>Will they finish their project in class?</summary><p>Classes aim for a finished or nearly finished take-home project. Pre-cut or partially prepared materials keep the focus on learning. Larger projects, such as a stool or bench, may need prepared assemblies or more than one session. Glue or finishes may still need drying time at home.</p></details>
+        <details><summary>What should my child wear?</summary><p>Closed-toe shoes and comfortable clothes that can get dusty. Tie back long hair, secure loose clothing, and remove dangling jewelry. Ask about protective equipment and any access needs before attending.</p></details>
+        <details><summary>Is the class right for my child&rsquo;s needs?</summary><p>Kids of all abilities are welcome at Timber &amp; Young. Tell us what your child needs, whether that&rsquo;s learning, sensory, physical, or anything else, and we&rsquo;ll work it out together. Our instructors share a belief that every child can build something they&rsquo;re proud of.</p></details>
+        <details><summary>Can parents stay?</summary><p>Yes. Parents are always welcome to stay and watch, or to help their maker at the bench. Let us know about any access needs or other questions in your inquiry.</p></details>
+        <details><summary>What if I need to cancel?</summary><p>Email us at troy.alex.aguirre@gmail.com at least 48 hours before class to cancel. Because materials are purchased and prepared in advance, refunds are reviewed case by case and may be partial. Not every request qualifies, and Timber &amp; Young makes the final decision. Cancellations due to weather or illness are not refunded unless discussed with our staff at least 48 hours before class. If we cancel a class, we'll offer a full refund or a credit toward another class.</p></details>
+        <details><summary>What if we arrive late?</summary><p>Classes start on time with a required safety briefing. Students who miss the safety portion will not be able to join the rest of the class, and no refund will be given. No exceptions, because safety comes first. Please plan to arrive a few minutes early.</p></details>
+        <details><summary>What if I&rsquo;m late for pickup?</summary><p>Please pick up on time so our instructors can prepare for the next class. After 15 minutes, a $10 late fee may apply. If you&rsquo;re running late, call or text (757) 968-3972.</p></details>
+      </div>
+      <div class="policies">
+      <span class="eyebrow">Class policies</span>
+      <div class="ontime" role="note">
+        <b>Arrive on time. Safety comes first.</b>
+        <p>Every class starts on time with a required safety briefing. Students who miss the safety portion at the start of class will not be able to join the rest of the class, and no refund will be given. No exceptions. Please plan to arrive a few minutes early.</p>
+      </div>
+      <div class="policy-grid">
+        <div class="policy"><b>Two adults in the room</b><p>We aim to have two adults in every class of up to 20 students, so makers get more hands-on guidance and supervision.</p></div><div class="policy"><b>Restroom independence (ages 4–7)</b><p>Woodworking Explorers must be able to use the restroom on their own. Staff do not provide restroom assistance. Children who need help are welcome when a parent or guardian stays for the full class.</p></div>
+        <div class="policy"><b>Cancellations &amp; refunds</b><p>Please let us know at least 48 hours before class. Materials are purchased and prepared in advance, so refunds are reviewed case by case and may be partial. Not every request qualifies for a refund, and Timber &amp; Young makes the final decision.</p></div>
+        <div class="policy"><b>Weather or illness</b><p>Cancellations due to weather or a child&rsquo;s illness are not refunded unless discussed with our staff at least 48 hours before class.</p></div>
+        <div class="policy"><b>Requesting a refund</b><p>Talk with our staff in person, or call or text (757) 968-3972. Every request is reviewed individually.</p></div>
+        <div class="policy"><b>If we cancel a class</b><p>If Timber &amp; Young cancels a class, we'll offer a full refund or a credit toward another class.</p></div>
+        <div class="policy"><b>Pickup &amp; parents</b><p>Parents are always welcome to stay and watch or help. Please pick up on time: after 15 minutes, a $10 late fee may apply.</p></div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section id="interest" class="band-pine">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Their next proud moment starts here</span>
+        <h2>Let’s make something happen.</h2>
+        <p class="lede">Tell us a little about your young maker so we can prepare an inquiry for the right class. Classes begin November 6, 2026, at 5345 Virginia Beach Blvd, Virginia Beach, VA 23462. No classes on holidays. Once Troy replies that your date is open, pay in full online by card, Apple Pay, or Google Pay. Spots are secured only when payment is received.</p>
+        <div class="contact" aria-label="Contact the organizer">
+          <div class="contact-row"><span class="contact-k">Email</span><a class="contact-v" id="cEmail" href="mailto:troy.alex.aguirre@gmail.com">troy.alex.aguirre@gmail.com</a><button type="button" class="copy" data-copy="cEmail">Copy</button></div>
+          <div class="contact-row"><span class="contact-k">Phone</span><a class="contact-v" id="cPhone" href="tel:+17579683972">(757) 968-3972</a><button type="button" class="copy" data-copy="cPhone">Copy</button></div>
+          <div class="contact-row"><span class="contact-k">Where</span><a class="contact-v" href="https://maps.google.com/?q=5345+Virginia+Beach+Blvd,+Virginia+Beach,+VA+23462" target="_blank" rel="noopener">5345 Virginia Beach Blvd, Virginia Beach, VA 23462</a></div>
+          <span class="contact-note" id="copyNote" aria-live="polite">Email your class request. Call or text with questions.</span>
+        </div>
+        <div class="waiver">
+          <b>Before your first class: print and sign the waiver</b>
+          <p>Every student needs a signed Participation Agreement. Print the one-page form, fill it out, and bring it to your child&rsquo;s first class. Students without a signed form can&rsquo;t take part.</p>
+          <div class="waiver-actions"><button type="button" class="btn go" data-waiver>Download the waiver (PDF)</button><a href="Timber-and-Young-Waiver.pdf" target="_blank" rel="noopener" class="waiver-open">Open in a new tab</a></div>
+          <span class="waiver-msg" aria-live="polite"></span>
+        </div>
+      </div>
+      <form class="form-grid" id="inqForm" novalidate>
+        <div><label for="pName">Parent / guardian name <span class="req">*</span></label><input id="pName" required autocomplete="name"></div>
+        <div><label for="pEmail">Email <span class="req">*</span></label><input id="pEmail" type="email" required autocomplete="email"></div>
+        <div><label for="pPhone">Phone <span class="req">*</span></label><input id="pPhone" type="tel" autocomplete="tel" required></div>
+        <div><label for="cAge">Child’s age <span class="req">*</span></label><input id="cAge" type="number" min="4" max="18" required></div>
+        <div><label for="cName">Child’s first name</label><input id="cName"></div>
+        <div><label for="fClass">Preferred class / age group <span class="req">*</span></label><select id="fClass" required><option value="">Select a class</option></select></div>
+        <div class="full"><label for="fDate">Preferred class date &amp; time</label><select id="fDate"><option value="">Select a class first</option></select><div class="spots" id="formSpots" aria-live="polite" hidden></div></div>
+        <div class="full"><label for="fNotes">Anything else you’d like us to know?</label><textarea id="fNotes"></textarea><small>Please avoid including sensitive details about your child. Troy will reply to let you know your date is open. Your spot is secured once you pay in full.</small></div>
+        <p class="err full" id="formErr" hidden></p>
+        <div class="full"><button class="btn go" type="submit">Request my spot ↗</button></div>
+        <div class="result" id="result" hidden>
+          <b>Your inquiry is ready.</b>
+          <span id="heldMsg" style="font-size:.92rem;color:var(--muted)"></span>
+          <div class="waiver waiver-step"><b>Next: print the waiver</b><p>Print the one-page Participation Agreement, fill it out, and bring it to your child&rsquo;s first class.</p><div class="waiver-actions"><button type="button" class="btn" data-waiver>Download the waiver (PDF)</button><a href="Timber-and-Young-Waiver.pdf" target="_blank" rel="noopener" class="waiver-open">Open in a new tab</a></div><span class="waiver-msg" aria-live="polite"></span></div>
+          <div class="paybox" id="payBox" hidden></div>
+          <a class="btn go" id="sendReq" href="mailto:troy.alex.aguirre@gmail.com">Send my request by email ↗</a>
+          <pre id="resultText"></pre>
+          <div><button class="btn" type="button" id="copyBtn">Copy details</button> <span id="copyMsg" style="font-size:.9rem;color:var(--muted)"></span></div>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span><b style="font-family:var(--display);color:var(--ink)">timber &amp; young</b> · Small beginnings. Lifelong makers.</span><span>troy.alex.aguirre@gmail.com · (757) 968-3972</span><span>© Timber &amp; Young</span></div></footer>
+<a class="mobile-cta" href="#classes">Classes start Nov 6 · Sign up →</a>
+
+<script>
+const CAPACITY=20, LOW=5;
+const CLASSES=[
+ {id:"explorers",name:"Woodworking Explorers",ages:"Ages 4–7",price:75,pay:"https://square.link/u/kzi1OQ7s",blurb:"Sanding, glue, clamps, and decorating with pre-cut pieces. Power tools stay with the instructor.",projects:"Wooden robots, name plaques, simple vehicles",slots:[[4,"6:00–7:00 PM"],[6,"9:30–10:30 AM"]]},
+ {id:"junior",name:"Junior Woodworkers",ages:"Ages 8–10",price:140,pay:"https://square.link/u/KGrVWIE5",pack:{price:420,pay:"https://square.link/u/DcnbDW6b"},blurb:"Measuring, hand tools, and fastening with guidance. Projects get a little more ambitious.",projects:"Birdhouses, pencil boxes, catapults",slots:[[1,"6:00–8:00 PM"],[3,"4:00–6:00 PM"],[6,"11:00 AM–1:00 PM"]]},
+ {id:"beginning",name:"Beginning Woodworkers",ages:"Ages 11–13",price:180,pay:"https://square.link/u/mSLzZZwN",pack:{price:540,pay:"https://square.link/u/0suu1y30"},blurb:"Planning a build, accurate cuts, and finishing. Supervised tool use when ready.",projects:"Shelves, phone stands, toolboxes",slots:[[3,"6:30–8:30 PM"],[5,"6:00–8:00 PM"],[6,"1:30–3:30 PM"]]},
+ {id:"practical",name:"Practical Woodworking",ages:"Ages 14–18",price:220,pay:"https://square.link/u/eNj82D82",pack:{price:660,pay:"https://square.link/u/lHUdr692"},blurb:"Joinery, finishing, and real furniture skills, with instructor-approved tool use.",projects:"Step stools, benches, cutting boards",slots:[[2,"5:30–7:30 PM"],[6,"4:00–6:00 PM"]]}
+];
+/* No classes on these holidays. */
+const HOLIDAYS=new Set(["2026-11-11","2026-11-26","2026-11-27","2026-11-28","2026-12-24","2026-12-25","2026-12-26","2026-12-31"]);
+const DAYS=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const fmt=new Intl.DateTimeFormat("en-US",{weekday:"short",month:"short",day:"numeric",year:"numeric",timeZone:"UTC"});
+function datesFor(c){const out=[];for(let d=new Date(Date.UTC(2026,10,6));d<=new Date(Date.UTC(2026,11,31));d=new Date(d.getTime()+864e5)){for(const [dow,t] of c.slots){if(d.getUTCDay()===dow&&!HOLIDAYS.has(d.toISOString().slice(0,10)))out.push({key:c.id+"_"+d.toISOString().slice(0,10),label:`${fmt.format(d)} · ${t} ET`})}}return out}
+CLASSES.forEach(c=>c.dates=datesFor(c));
+const ALL={};CLASSES.forEach(c=>c.dates.forEach(s=>ALL[s.key]={...s,cls:c}));
+
+/* Spot counts live in seats.json, published beside the page, so every visitor sees them (signed in or not).
+   Shape: {"taken": {"<classId>_<YYYY-MM-DD>": <enrolled count>}, "updated": "<ISO time>"}.
+   The owner changes them with the +/- buttons (saved as a new seats.json), or by asking Claude. */
+let live=false, isAdmin=false, artifactNs=null, updated="";
+const taken={};
+const left=k=>Math.max(0,CAPACITY-(taken[k]||0));
+
+const optLabel=s=>live?`${s.label} — ${left(s.key)?left(s.key)+" spot"+(left(s.key)===1?"":"s")+" left":"FULL"}`:s.label;
+function fillSelect(sel,c,ph){const v=sel.value;sel.innerHTML=`<option value="">${ph}</option>`+c.dates.map(s=>`<option value="${s.key}"${live&&!left(s.key)?" disabled":""}>${optLabel(s)}</option>`).join("");if(v&&(!live||left(v)))sel.value=v}
+
+function spotsHTML(k){
+ if(!k)return "";
+ if(!live)return `<span class="msg">Spot counts are loading. If they don’t appear, ask about availability in your inquiry.</span>`;
+ const n=left(k),pct=Math.round((n/CAPACITY)*100);
+ const msg=n===0?"This class is full. Pick another date.":n<=LOW?"Almost full. Request soon.":"Plenty of room.";
+ return `<div class="spots-line"><span>Spots left</span><span class="n">${n} of ${CAPACITY}</span></div><div class="meter" role="progressbar" aria-valuemin="0" aria-valuemax="${CAPACITY}" aria-valuenow="${n}" aria-label="Spots left"><i style="width:${pct}%"></i></div><span class="msg">${msg}</span>`;
+}
+function paintSpots(el,k){el.hidden=!k;el.className="spots"+(live&&k&&!left(k)?" full":live&&k&&left(k)<=LOW?" low":"");el.innerHTML=spotsHTML(k)}
+
+document.getElementById("classGrid").innerHTML=CLASSES.map(c=>`
+ <article class="ticket">
+  <div class="ticket-top"><span class="ages">${c.ages}</span><span class="price">$${c.price} <small>per class</small></span></div>${c.pack?`<div class="packline"><b>4-class pack: $${c.pack.price}</b> <span>(save $${c.price*4-c.pack.price})</span></div>`:""}
+  <div class="ticket-body"><h3>${c.name}</h3><p>${c.blurb}</p><p class="projects"><b>Example projects:</b> ${c.projects}</p><p class="projects"><b>Class size:</b> up to ${CAPACITY} students; we aim for 2 adults in every class</p>${c.id==="explorers"?`<p class="projects"><b>Restroom:</b> must use the restroom independently, or a parent stays for class</p>`:""}</div>
+  <div class="ticket-foot"><div><label for="d-${c.id}">Choose a class date</label><select id="d-${c.id}"></select></div>
+  <div class="spots" id="s-${c.id}" aria-live="polite" hidden></div>
+  <div class="admin" id="a-${c.id}" hidden><span class="tag">Owner · enrolled</span><button type="button" data-adj="-1" aria-label="Remove one student">−</button><b>0</b><button type="button" data-adj="1" aria-label="Add one student">+</button></div>
+  <a class="btn go" href="#interest" data-req="${c.id}">Request this class ↗</a>
+  ${c.pay?`<a class="paylink" href="${c.pay}" target="_blank" rel="noopener">Date open? Pay $${c.price} with card or Apple Pay ↗</a><span class="paynote">At checkout, type your class date exactly as it appears in the date list above.</span>${c.pack?`<a class="paylink" href="${c.pack.pay}" target="_blank" rel="noopener">Booking 4 classes? Pay $${c.pack.price} for the 4-class pack ↗</a><span class="paynote">4-class pack: one child, 4 classes in this age group, all between Nov 6 and Dec 31. Request each date first, then list all 4 at checkout.</span>`:""}`:""}</div>
+ </article>`).join("");
+
+function paintTicket(c){
+ const sel=document.getElementById("d-"+c.id);fillSelect(sel,c,"Select a date & time");
+ const k=sel.value;paintSpots(document.getElementById("s-"+c.id),k);
+ document.querySelector(`[data-req="${c.id}"]`).setAttribute("aria-disabled",String(live&&!!k&&!left(k)));
+ const a=document.getElementById("a-"+c.id);a.hidden=!(isAdmin&&live&&k);a.querySelector("b").textContent=taken[k]||0;
+}
+CLASSES.forEach(c=>{paintTicket(c);document.getElementById("d-"+c.id).addEventListener("change",()=>paintTicket(c))});
+
+const rows=[];CLASSES.forEach(c=>c.slots.forEach(([d,t])=>rows.push({d,t,c})));
+const mins=t=>{const [a,b]=t.split("–");const m=a.match(/(\d+):(\d+)/);let h=+m[1]%12;if(/PM/.test(a)||(!/AM/.test(a)&&/PM/.test(b)))h+=12;return h*60+ +m[2]};
+rows.sort((a,b)=>(a.d-b.d)||mins(a.t)-mins(b.t));
+document.getElementById("weeklyBody").innerHTML=rows.map(r=>`<tr><td>${DAYS[r.d]}</td><td>${r.t}</td><td>${r.c.name} · ${r.c.ages}</td></tr>`).join("");
+
+const fClass=document.getElementById("fClass"),fDate=document.getElementById("fDate"),formSpots=document.getElementById("formSpots");
+fClass.innerHTML+=CLASSES.map(c=>`<option value="${c.id}">${c.name} · ${c.ages}</option>`).join("");
+function paintForm(){const c=CLASSES.find(x=>x.id===fClass.value);if(c)fillSelect(fDate,c,"Select a date & time");else fDate.innerHTML='<option value="">Select a class first</option>';paintSpots(formSpots,fDate.value)}
+fClass.addEventListener("change",paintForm);fDate.addEventListener("change",paintForm);
+document.querySelectorAll("[data-req]").forEach(a=>a.addEventListener("click",()=>{const id=a.dataset.req;fClass.value=id;paintForm();fDate.value=document.getElementById("d-"+id).value;paintForm()}));
+const updEl=document.getElementById("spotsUpdated");
+function repaint(){CLASSES.forEach(paintTicket);paintForm();
+ if(updEl){updEl.hidden=!(live&&updated);if(live&&updated)updEl.textContent="Spot counts last updated "+new Date(updated).toLocaleString("en-US",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit",timeZone:"America/New_York"})+" ET."}}
+
+const menuBtn=document.getElementById("menuBtn"),nav=document.getElementById("nav");
+menuBtn.addEventListener("click",()=>{const o=nav.classList.toggle("open");menuBtn.setAttribute("aria-expanded",o)});
+nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");menuBtn.setAttribute("aria-expanded","false")}));
+
+/* Owner +/- buttons: change locally, then save one new seats.json a moment after the last click. */
+const saveEl=document.getElementById("ownerSave");
+let saveTimer=null;
+function ownerMsg(t){if(saveEl){saveEl.hidden=!t;saveEl.textContent=t}}
+async function saveCounts(){
+ updated=new Date().toISOString();repaint();ownerMsg("Saving…");
+ const clean={};for(const k in taken)if(taken[k]>0)clean[k]=taken[k];
+ try{
+  await artifactNs.publish({"seats.json":{content:JSON.stringify({taken:clean,updated},null,1),contentType:"application/json"}});
+  ownerMsg("Saved. Every visitor now sees these counts.");
+ }catch(e){
+  const c=e&&e.code;
+  if(c==="conflict")return;
+  if(c==="rate_limited"){ownerMsg("Saving too often. Wait a moment, then click again.");return}
+  if(c==="upstream_error"){ownerMsg("Couldn’t save just now. Click + or − again to retry.");return}
+  isAdmin=false;repaint();
+  ownerMsg("Counts can’t be saved from this view. Ask Claude to update them for you.");
+ }
+}
+document.getElementById("classGrid").addEventListener("click",e=>{
+ const b=e.target.closest("[data-adj]");if(!b||!isAdmin)return;
+ const c=CLASSES.find(x=>b.closest(".ticket").querySelector(`#d-${x.id}`));const k=document.getElementById("d-"+c.id).value;if(!k)return;
+ const n=(taken[k]||0)+(+b.dataset.adj);taken[k]=Math.min(CAPACITY,Math.max(0,n));
+ repaint();ownerMsg("Unsaved changes…");clearTimeout(saveTimer);saveTimer=setTimeout(saveCounts,2000);
+});
+
+const form=document.getElementById("inqForm"),err=document.getElementById("formErr");
+form.addEventListener("submit",e=>{e.preventDefault();
+ const v=id=>document.getElementById(id).value.trim();
+ const miss=[];if(!v("pName"))miss.push("your name");if(!/^\S+@\S+\.\S+$/.test(v("pEmail")))miss.push("a valid email");if(v("pPhone").replace(/\D/g,"").length<10)miss.push("a phone number");
+ const age=+v("cAge");if(!age||age<4||age>18)miss.push("your child’s age (4–18)");if(!v("fClass"))miss.push("a class");
+ if(miss.length){err.textContent="Please add "+miss.join(", ")+".";err.hidden=false;return}
+ const k=v("fDate");
+ if(live&&k&&!left(k)){err.textContent="That class is full. Please pick another date.";err.hidden=false;return}
+ err.hidden=true;
+ const c=CLASSES.find(x=>x.id===v("fClass"));
+ document.getElementById("heldMsg").textContent="Tap Send my request by email, then press Send in your email app. We’ll email you back as soon as we can to let you know your date is open. Your spot is secured once you pay in full. If the button doesn’t open your email, copy the details below and send them to troy.alex.aguirre@gmail.com.";
+ document.getElementById("resultText").textContent=[`Parent/guardian: ${v("pName")}`,`Email: ${v("pEmail")}`,v("pPhone")&&`Phone: ${v("pPhone")}`,`Child: ${v("cName")||"(not given)"}, age ${age}`,`Class: ${c.name} (${c.ages}) · $${c.price}`,`Date: ${k?ALL[k].label:"Flexible"}`,v("fNotes")&&`Notes: ${v("fNotes")}`].filter(Boolean).join("\n");
+ {const sr=document.getElementById("sendReq");if(sr)sr.href="mailto:troy.alex.aguirre@gmail.com?subject="+encodeURIComponent(`Class request: ${c.name} · ${k?ALL[k].label:"Flexible"}`)+"&body="+encodeURIComponent(document.getElementById("resultText").textContent);}
+ const pb=document.getElementById("payBox");
+ const dateTxt=k?ALL[k].label:"";
+ pb.innerHTML=c.pay?`${dateTxt?`<div class="datecopy"><span>At checkout, paste this into <b>Class date and time</b> exactly as shown:</span><code id="payDate">${dateTxt}</code><button type="button" class="copy" id="payDateCopy">Copy class date</button></div>`:`<span>At checkout, type your class date exactly as it appears in the date list, for example <b>Sat, Nov 7, 2026 · 9:30–10:30 AM ET</b>.</span>`}<a class="btn go" href="${c.pay}" target="_blank" rel="noopener">Pay $${c.price} with card or Apple Pay ↗</a><span>Pay after Troy replies that your date is open. Your spot is secured once payment is received. Enter your child’s first name too.</span>${c.pack?`<a class="btn" href="${c.pack.pay}" target="_blank" rel="noopener">Or pay $${c.pack.price} for a 4-class pack ↗</a><span>The pack covers 4 classes for one child between Nov 6 and Dec 31. Request each date, then list all 4 at checkout.</span>`:""}`:"";
+ const pdc=document.getElementById("payDateCopy");
+ if(pdc)pdc.addEventListener("click",()=>{const el=document.getElementById("payDate");navigator.clipboard.writeText(el.textContent).then(()=>{pdc.textContent="Copied"}).catch(()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);pdc.textContent="Selected. Copy it"})});
+ pb.hidden=false;
+ document.getElementById("result").hidden=false;});
+document.getElementById("copyBtn").addEventListener("click",()=>{const t=document.getElementById("resultText").textContent,m=document.getElementById("copyMsg");
+ navigator.clipboard.writeText(t).then(()=>m.textContent="Copied.").catch(()=>{const r=document.createRange();r.selectNodeContents(document.getElementById("resultText"));const s=getSelection();s.removeAllRanges();s.addRange(r);m.textContent="Selected. Copy it from your menu."})});
+
+document.querySelectorAll("[data-copy]").forEach(b=>b.addEventListener("click",()=>{const el=document.getElementById(b.dataset.copy),note=document.getElementById("copyNote"),t=el.textContent;
+ navigator.clipboard.writeText(t).then(()=>{note.textContent="Copied "+t+"."}).catch(()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);note.textContent="Selected. Copy it from your menu."})}));
+
+/* Waiver download: use the viewer's save prompt when available, otherwise open the PDF. */
+document.querySelectorAll("[data-waiver]").forEach(btn=>btn.addEventListener("click",async()=>{
+ const box=btn.closest(".waiver"),msg=box.querySelector(".waiver-msg"),open=()=>box.querySelector(".waiver-open").click();
+ try{
+  const dl=window.claude?.use?await claude.use("downloads"):null;
+  if(!dl){open();return}
+  const blob=await (await fetch("Timber-and-Young-Waiver.pdf")).blob();
+  await dl.save({filename:"Timber-and-Young-Waiver.pdf",data:blob});
+  msg.textContent="Saved. Print it and bring it to class.";
+ }catch(e){
+  if(e&&e.code==="declined")return;
+  if(e&&e.code==="rate_limited"){msg.textContent="A save prompt is already open.";return}
+  open();
+ }
+}));
+
+/* Load counts for everyone; light up owner controls only for people who can edit the page. */
+fetch("seats.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()}).then(d=>{
+ const t=(d&&d.taken)||{};for(const k in t)if(ALL[k])taken[k]=Math.max(0,Math.min(CAPACITY,+t[k]||0));
+ updated=(d&&d.updated)||"";live=true;repaint();
+}).catch(()=>{live=false;repaint()});
+(async()=>{
+ if(!window.claude?.use)return;
+ const [a,user]=await Promise.all([claude.use("artifact"),claude.use("user")]);
+ if(!a||!(user?.canEdit?.()))return;
+ artifactNs=a;isAdmin=true;repaint();
+})();
+</script>
+
+</body></html>
