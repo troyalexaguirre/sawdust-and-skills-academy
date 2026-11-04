@@ -515,7 +515,7 @@ function spotsHTML(k){
  if(!k)return "";
  if(!live)return `<span class="msg">Spot counts are loading. If they don’t appear, email or call us to check availability.</span>`;
  const n=left(k),pct=Math.round((n/CAPACITY)*100);
- const msg=n===0?"This class is full. Pick another date.":n<=2?"Only "+n+" left. Spots go to the first families to pay, and counts update about once an hour. If this date fills before your payment comes through, we’ll contact you about another date.":n<=LOW?"Almost full. Reserve soon.":"Plenty of room.";
+ const msg=n===0?"This class is full. Pick another date.":n<=2?"Only "+n+" left. Spots go to the first families to pay, and counts update about once an hour. If this date fills before your payment comes through, we’ll refund your payment in full and help you pick another date.":n<=LOW?"Almost full. Reserve soon.":"Plenty of room.";
  return `<div class="spots-line"><span>Spots left</span><span class="n">${n} of ${CAPACITY}</span></div><div class="meter" role="progressbar" aria-valuemin="0" aria-valuemax="${CAPACITY}" aria-valuenow="${n}" aria-label="Spots left"><i style="width:${pct}%"></i></div><span class="msg">${msg}</span>`;
 }
 function paintSpots(el,k){el.hidden=!k;el.className="spots"+(live&&k&&!left(k)?" full":live&&k&&left(k)<=LOW?" low":"");el.innerHTML=spotsHTML(k)}
