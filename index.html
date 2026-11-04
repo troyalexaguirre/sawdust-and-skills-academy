@@ -304,7 +304,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
       </div>
       <div class="classes" id="classGrid"></div>
       <p class="note">Projects are examples, adapted to each learner. Materials are prepared to fit each class; larger builds may use prepared parts or continue across sessions.</p>
-      <p class="note">Each class takes up to 20 students, and we aim to have two adults in every class. Woodworking Explorers (ages 4–7) must be able to use the restroom independently; children who need assistance are welcome when a parent or guardian stays for the full class. Pick a date to see how many spots are left. Once Troy replies that your date is open, pay in full online by card, Apple Pay, or Google Pay through Square. Your spot is secured only when payment is received.</p>
+      <p class="note">Each class takes up to 20 students, and we aim to have two adults in every class. Woodworking Explorers (ages 4–7) must be able to use the restroom independently; children who need assistance are welcome when a parent or guardian stays for the full class. Only open dates are shown. Pick one to see how many spots are left, then pay online by card, Apple Pay, or Google Pay through Square. Your spot is secured once payment is received.</p>
       <p class="note" id="spotsUpdated" hidden></p>
       <p class="note" id="ownerSave" role="status" hidden></p>
     </div>
@@ -412,7 +412,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
         <details><summary>Will they finish their project in class?</summary><p>Classes aim for a finished or nearly finished take-home project. Pre-cut or partially prepared materials keep the focus on learning. Larger projects, such as a stool or bench, may need prepared assemblies or more than one session. Glue or finishes may still need drying time at home.</p></details>
         <details><summary>What should my child wear?</summary><p>Closed-toe shoes and comfortable clothes that can get dusty. Tie back long hair, secure loose clothing, and remove dangling jewelry. Ask about protective equipment and any access needs before attending.</p></details>
         <details><summary>Is the class right for my child&rsquo;s needs?</summary><p>Kids of all abilities are welcome at Sawdust &amp; Skills Academy. Tell us what your child needs, whether that&rsquo;s learning, sensory, physical, or anything else, and we&rsquo;ll work it out together. Our instructors share a belief that every child can build something they&rsquo;re proud of.</p></details>
-        <details><summary>Can parents stay?</summary><p>Yes. Parents are always welcome to stay and watch, or to help their maker at the bench. Let us know about any access needs or other questions in your inquiry.</p></details>
+        <details><summary>Can parents stay?</summary><p>Yes. Parents are always welcome to stay and watch, or to help their maker at the bench. Let us know about any access needs or other questions by email or phone before you book.</p></details>
         <details><summary>What if I need to cancel?</summary><p>Email us at troy.alex.aguirre@gmail.com at least 48 hours before class to cancel. Because materials are purchased and prepared in advance, refunds are reviewed case by case and may be partial. Not every request qualifies, and Sawdust &amp; Skills Academy makes the final decision. Cancellations due to weather or illness are not refunded unless discussed with our staff at least 48 hours before class. If we cancel a class, we'll offer a full refund or a credit toward another class.</p></details>
         <details><summary>What if we arrive late?</summary><p>Classes start on time with a required safety briefing. Students who miss the safety portion will not be able to join the rest of the class, and no refund will be given. No exceptions, because safety comes first. Please plan to arrive a few minutes early.</p></details>
         <details><summary>What if I&rsquo;m late for pickup?</summary><p>Please pick up on time so our instructors can prepare for the next class. After 15 minutes, a $10 late fee may apply. If you&rsquo;re running late, call or text (757) 968-3972.</p></details>
@@ -440,12 +440,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
       <div class="head">
         <span class="eyebrow">Their next proud moment starts here</span>
         <h2>Let’s make something happen.</h2>
-        <p class="lede">Tell us a little about your young maker so we can prepare an inquiry for the right class. Classes begin November 6, 2026, at 5345 Virginia Beach Blvd, Virginia Beach, VA 23462. No classes on holidays. Once Troy replies that your date is open, pay in full online by card, Apple Pay, or Google Pay. Spots are secured only when payment is received.</p>
+        <p class="lede">Pick a class and an open date, then pay online to reserve your young maker’s spot. Only dates with spots left are shown. Classes begin November 6, 2026, at 5345 Virginia Beach Blvd, Virginia Beach, VA 23462. No classes on holidays. Pay in full by card, Apple Pay, or Google Pay. Your spot is secured once payment is received, and we’ll email you a confirmation.</p>
         <div class="contact" aria-label="Contact the organizer">
           <div class="contact-row"><span class="contact-k">Email</span><a class="contact-v" id="cEmail" href="mailto:troy.alex.aguirre@gmail.com">troy.alex.aguirre@gmail.com</a><button type="button" class="copy" data-copy="cEmail">Copy</button></div>
           <div class="contact-row"><span class="contact-k">Phone</span><a class="contact-v" id="cPhone" href="tel:+17579683972">(757) 968-3972</a><button type="button" class="copy" data-copy="cPhone">Copy</button></div>
           <div class="contact-row"><span class="contact-k">Where</span><a class="contact-v" href="https://maps.google.com/?q=5345+Virginia+Beach+Blvd,+Virginia+Beach,+VA+23462" target="_blank" rel="noopener">5345 Virginia Beach Blvd, Virginia Beach, VA 23462</a></div>
-          <span class="contact-note" id="copyNote" aria-live="polite">Email your class request. Call or text with questions.</span>
+          <span class="contact-note" id="copyNote" aria-live="polite">Questions? Email, call, or text us.</span>
         </div>
         <div class="waiver">
           <b>Before your first class: print and sign the waiver</b>
@@ -459,18 +459,18 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
         <div><label for="pEmail">Email <span class="req">*</span></label><input id="pEmail" type="email" required autocomplete="email"></div>
         <div><label for="pPhone">Phone <span class="req">*</span></label><input id="pPhone" type="tel" autocomplete="tel" required></div>
         <div><label for="cAge">Child’s age <span class="req">*</span></label><input id="cAge" type="number" min="4" max="18" required></div>
-        <div><label for="cName">Child’s first name</label><input id="cName"></div>
+        <div><label for="cName">Child’s first name <span class="req">*</span></label><input id="cName" required autocomplete="off"></div>
         <div><label for="fClass">Preferred class / age group <span class="req">*</span></label><select id="fClass" required><option value="">Select a class</option></select></div>
-        <div class="full"><label for="fDate">Preferred class date &amp; time</label><select id="fDate"><option value="">Select a class first</option></select><div class="spots" id="formSpots" aria-live="polite" hidden></div></div>
-        <div class="full"><label for="fNotes">Anything else you’d like us to know?</label><textarea id="fNotes"></textarea><small>Please avoid including sensitive details about your child. Troy will reply to let you know your date is open. Your spot is secured once you pay in full.</small></div>
+        <div class="full"><label for="fDate">Class date &amp; time <span class="req">*</span></label><select id="fDate"><option value="">Select a class first</option></select><div class="spots" id="formSpots" aria-live="polite" hidden></div></div>
+        <div class="full"><label for="fNotes">Anything else you’d like us to know?</label><textarea id="fNotes"></textarea><small>Please avoid including sensitive details about your child. If you have a question or special request, use the email button on the next step. Your spot is secured once you pay in full.</small></div>
         <p class="err full" id="formErr" hidden></p>
-        <div class="full"><button class="btn go" type="submit">Request my spot ↗</button></div>
+        <div class="full"><button class="btn go" type="submit">Continue to payment →</button></div>
         <div class="result" id="result" hidden>
-          <b>Your inquiry is ready.</b>
+          <b>Your date is open. One step left: pay to secure the spot.</b>
           <span id="heldMsg" style="font-size:.92rem;color:var(--muted)"></span>
-          <div class="waiver waiver-step"><b>Next: print the waiver</b><p>Print the one-page Participation Agreement, fill it out, and bring it to your child&rsquo;s first class.</p><div class="waiver-actions"><button type="button" class="btn" data-waiver>Download the waiver (PDF)</button><a href="Sawdust-and-Skills-Academy-Waiver.pdf" target="_blank" rel="noopener" class="waiver-open">Open in a new tab</a></div><span class="waiver-msg" aria-live="polite"></span></div>
           <div class="paybox" id="payBox" hidden></div>
-          <a class="btn go" id="sendReq" href="mailto:troy.alex.aguirre@gmail.com">Send my request by email ↗</a>
+          <div class="waiver waiver-step"><b>Next: print the waiver</b><p>Print the one-page Participation Agreement, fill it out, and bring it to your child&rsquo;s first class.</p><div class="waiver-actions"><button type="button" class="btn" data-waiver>Download the waiver (PDF)</button><a href="Sawdust-and-Skills-Academy-Waiver.pdf" target="_blank" rel="noopener" class="waiver-open">Open in a new tab</a></div><span class="waiver-msg" aria-live="polite"></span></div>
+          <span style="font-size:.9rem;color:var(--muted)">Have a question or special request first? <a id="sendReq" href="mailto:troy.alex.aguirre@gmail.com">Email us these details</a> and we’ll get back to you.</span>
           <pre id="resultText"></pre>
           <div><button class="btn" type="button" id="copyBtn">Copy details</button> <span id="copyMsg" style="font-size:.9rem;color:var(--muted)"></span></div>
         </div>
@@ -494,7 +494,10 @@ const CLASSES=[
 const HOLIDAYS=new Set(["2026-11-11","2026-11-26","2026-11-27","2026-11-28","2026-12-24","2026-12-25","2026-12-26","2026-12-31"]);
 const DAYS=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 const fmt=new Intl.DateTimeFormat("en-US",{weekday:"short",month:"short",day:"numeric",year:"numeric",timeZone:"UTC"});
-function datesFor(c){const out=[];for(let d=new Date(Date.UTC(2026,10,6));d<=new Date(Date.UTC(2026,11,31));d=new Date(d.getTime()+864e5)){for(const [dow,t] of c.slots){if(d.getUTCDay()===dow&&!HOLIDAYS.has(d.toISOString().slice(0,10)))out.push({key:c.id+"_"+d.toISOString().slice(0,10),label:`${fmt.format(d)} · ${t} ET`})}}return out}
+const startMin=t=>{const [a,b]=t.split("–");const m=a.match(/(\d+):(\d+)/);let h=+m[1]%12;if(/PM/.test(a)||(!/AM/.test(a)&&/PM/.test(b)))h+=12;return h*60+ +m[2]};
+/* Today in Virginia Beach time, so dates that have already started drop off the list. */
+function nowET(){const p=Object.fromEntries(new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(new Date()).map(x=>[x.type,x.value]));return {day:`${p.year}-${p.month}-${p.day}`,min:+p.hour*60+ +p.minute}}
+function datesFor(c){const out=[];for(let d=new Date(Date.UTC(2026,10,6));d<=new Date(Date.UTC(2026,11,31));d=new Date(d.getTime()+864e5)){for(const [dow,t] of c.slots){if(d.getUTCDay()===dow&&!HOLIDAYS.has(d.toISOString().slice(0,10)))out.push({key:c.id+"_"+d.toISOString().slice(0,10),day:d.toISOString().slice(0,10),start:startMin(t),label:`${fmt.format(d)} · ${t} ET`})}}return out}
 CLASSES.forEach(c=>c.dates=datesFor(c));
 const ALL={};CLASSES.forEach(c=>c.dates.forEach(s=>ALL[s.key]={...s,cls:c}));
 
@@ -504,15 +507,18 @@ const ALL={};CLASSES.forEach(c=>c.dates.forEach(s=>ALL[s.key]={...s,cls:c}));
 let live=false, isAdmin=false, artifactNs=null, updated="";
 const taken={};
 const left=k=>Math.max(0,CAPACITY-(taken[k]||0));
+const started=s=>{const n=nowET();return s.day<n.day||(s.day===n.day&&s.start<=n.min)};
+/* Families only see dates that haven't started and still have spots; the owner sees every date. */
+const isOpen=s=>!!s&&!started(s)&&(!live||left(s.key)>0);
 
 const optLabel=s=>live?`${s.label} — ${left(s.key)?left(s.key)+" spot"+(left(s.key)===1?"":"s")+" left":"FULL"}`:s.label;
-function fillSelect(sel,c,ph){const v=sel.value;sel.innerHTML=`<option value="">${ph}</option>`+c.dates.map(s=>`<option value="${s.key}"${live&&!left(s.key)?" disabled":""}>${optLabel(s)}</option>`).join("");if(v&&(!live||left(v)))sel.value=v}
+function fillSelect(sel,c,ph){const v=sel.value;const list=isAdmin?c.dates:c.dates.filter(isOpen);sel.innerHTML=list.length?`<option value="">${ph}</option>`+list.map(s=>`<option value="${s.key}">${optLabel(s)}</option>`).join(""):`<option value="">No open dates right now. Email or call us.</option>`;if(v&&list.some(s=>s.key===v))sel.value=v}
 
 function spotsHTML(k){
  if(!k)return "";
- if(!live)return `<span class="msg">Spot counts are loading. If they don’t appear, ask about availability in your inquiry.</span>`;
+ if(!live)return `<span class="msg">Spot counts are loading. If they don’t appear, email or call us to check availability.</span>`;
  const n=left(k),pct=Math.round((n/CAPACITY)*100);
- const msg=n===0?"This class is full. Pick another date.":n<=LOW?"Almost full. Request soon.":"Plenty of room.";
+ const msg=n===0?"This class is full. Pick another date.":n<=LOW?"Almost full. Reserve soon.":"Plenty of room.";
  return `<div class="spots-line"><span>Spots left</span><span class="n">${n} of ${CAPACITY}</span></div><div class="meter" role="progressbar" aria-valuemin="0" aria-valuemax="${CAPACITY}" aria-valuenow="${n}" aria-label="Spots left"><i style="width:${pct}%"></i></div><span class="msg">${msg}</span>`;
 }
 function paintSpots(el,k){el.hidden=!k;el.className="spots"+(live&&k&&!left(k)?" full":live&&k&&left(k)<=LOW?" low":"");el.innerHTML=spotsHTML(k)}
@@ -524,8 +530,8 @@ document.getElementById("classGrid").innerHTML=CLASSES.map(c=>`
   <div class="ticket-foot"><div><label for="d-${c.id}">Choose a class date</label><select id="d-${c.id}"></select></div>
   <div class="spots" id="s-${c.id}" aria-live="polite" hidden></div>
   <div class="admin" id="a-${c.id}" hidden><span class="tag">Owner · enrolled</span><button type="button" data-adj="-1" aria-label="Remove one student">−</button><b>0</b><button type="button" data-adj="1" aria-label="Add one student">+</button></div>
-  <a class="btn go" href="#interest" data-req="${c.id}">Request this class ↗</a>
-  ${c.pay?`<a class="paylink" href="${c.pay}" target="_blank" rel="noopener">Date open? Pay $${c.price} with card or Apple Pay ↗</a><span class="paynote">At checkout, type your class date exactly as it appears in the date list above.</span>${c.pack?`<a class="paylink" href="${c.pack.pay}" target="_blank" rel="noopener">Booking 4 classes? Pay $${c.pack.price} for the 4-class pack ↗</a><span class="paynote">4-class pack: one child, 4 classes in this age group, all between Nov 6 and Dec 31. Request each date first, then list all 4 at checkout.</span>`:""}`:""}</div>
+  <a class="btn go" href="#interest" data-req="${c.id}">Reserve this class ↗</a>
+  ${c.pay?`<a class="paylink" href="${c.pay}" target="_blank" rel="noopener">Pay $${c.price} now with card or Apple Pay ↗</a><span class="paynote">At checkout, type your class date exactly as it appears in the date list above.</span>${c.pack?`<a class="paylink" href="${c.pack.pay}" target="_blank" rel="noopener">Booking 4 classes? Pay $${c.pack.price} for the 4-class pack ↗</a><span class="paynote">4-class pack: one child, 4 classes in this age group, all between Nov 6 and Dec 31. Pick 4 open dates, then list all 4 at checkout.</span>`:""}`:""}</div>
  </article>`).join("");
 
 function paintTicket(c){
@@ -584,18 +590,18 @@ const form=document.getElementById("inqForm"),err=document.getElementById("formE
 form.addEventListener("submit",e=>{e.preventDefault();
  const v=id=>document.getElementById(id).value.trim();
  const miss=[];if(!v("pName"))miss.push("your name");if(!/^\S+@\S+\.\S+$/.test(v("pEmail")))miss.push("a valid email");if(v("pPhone").replace(/\D/g,"").length<10)miss.push("a phone number");
- const age=+v("cAge");if(!age||age<4||age>18)miss.push("your child’s age (4–18)");if(!v("fClass"))miss.push("a class");
+ const age=+v("cAge");if(!age||age<4||age>18)miss.push("your child’s age (4–18)");if(!v("cName"))miss.push("your child’s first name");if(!v("fClass"))miss.push("a class");else if(!v("fDate"))miss.push("a class date");
  if(miss.length){err.textContent="Please add "+miss.join(", ")+".";err.hidden=false;return}
  const k=v("fDate");
- if(live&&k&&!left(k)){err.textContent="That class is full. Please pick another date.";err.hidden=false;return}
+ if(k&&!isOpen(ALL[k])){err.textContent="That date is no longer available. Please pick another date.";err.hidden=false;paintForm();return}
  err.hidden=true;
  const c=CLASSES.find(x=>x.id===v("fClass"));
- document.getElementById("heldMsg").textContent="Tap Send my request by email, then press Send in your email app. We’ll email you back as soon as we can to let you know your date is open. Your spot is secured once you pay in full. If the button doesn’t open your email, copy the details below and send them to troy.alex.aguirre@gmail.com.";
+ document.getElementById("heldMsg").textContent="Copy your class date, tap Pay, and paste the date at checkout along with your child’s first name. Spots go to the first families to pay, so please pay now to hold this date.";
  document.getElementById("resultText").textContent=[`Parent/guardian: ${v("pName")}`,`Email: ${v("pEmail")}`,v("pPhone")&&`Phone: ${v("pPhone")}`,`Child: ${v("cName")||"(not given)"}, age ${age}`,`Class: ${c.name} (${c.ages}) · $${c.price}`,`Date: ${k?ALL[k].label:"Flexible"}`,v("fNotes")&&`Notes: ${v("fNotes")}`].filter(Boolean).join("\n");
  {const sr=document.getElementById("sendReq");if(sr)sr.href="mailto:troy.alex.aguirre@gmail.com?subject="+encodeURIComponent(`Class request: ${c.name} · ${k?ALL[k].label:"Flexible"}`)+"&body="+encodeURIComponent(document.getElementById("resultText").textContent);}
  const pb=document.getElementById("payBox");
  const dateTxt=k?ALL[k].label:"";
- pb.innerHTML=c.pay?`${dateTxt?`<div class="datecopy"><span>At checkout, paste this into <b>Class date and time</b> exactly as shown:</span><code id="payDate">${dateTxt}</code><button type="button" class="copy" id="payDateCopy">Copy class date</button></div>`:`<span>At checkout, type your class date exactly as it appears in the date list, for example <b>Sat, Nov 7, 2026 · 9:30–10:30 AM ET</b>.</span>`}<a class="btn go" href="${c.pay}" target="_blank" rel="noopener">Pay $${c.price} with card or Apple Pay ↗</a><span>Pay after Troy replies that your date is open. Your spot is secured once payment is received. Enter your child’s first name too.</span>${c.pack?`<a class="btn" href="${c.pack.pay}" target="_blank" rel="noopener">Or pay $${c.pack.price} for a 4-class pack ↗</a><span>The pack covers 4 classes for one child between Nov 6 and Dec 31. Request each date, then list all 4 at checkout.</span>`:""}`:"";
+ pb.innerHTML=c.pay?`${dateTxt?`<div class="datecopy"><span>At checkout, paste this into <b>Class date and time</b> exactly as shown:</span><code id="payDate">${dateTxt}</code><button type="button" class="copy" id="payDateCopy">Copy class date</button></div>`:`<span>At checkout, type your class date exactly as it appears in the date list, for example <b>Sat, Nov 7, 2026 · 9:30–10:30 AM ET</b>.</span>`}<a class="btn go" href="${c.pay}" target="_blank" rel="noopener">Pay $${c.price} with card or Apple Pay ↗</a><span>Your spot is secured once payment is received. Enter your child’s first name too. We’ll email you a confirmation after your payment comes through.</span>${c.pack?`<a class="btn" href="${c.pack.pay}" target="_blank" rel="noopener">Or pay $${c.pack.price} for a 4-class pack ↗</a><span>The pack covers 4 classes for one child between Nov 6 and Dec 31. Pick 4 open dates from the list, then list all 4 at checkout.</span>`:""}`:"";
  const pdc=document.getElementById("payDateCopy");
  if(pdc)pdc.addEventListener("click",()=>{const el=document.getElementById("payDate");navigator.clipboard.writeText(el.textContent).then(()=>{pdc.textContent="Copied"}).catch(()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);pdc.textContent="Selected. Copy it"})});
  pb.hidden=false;
