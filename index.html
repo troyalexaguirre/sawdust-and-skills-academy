@@ -455,10 +455,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
         </div>
       </div>
       <form class="form-grid" id="inqForm" novalidate>
-        <div><label for="pName">Parent / guardian name <span class="req">*</span></label><input id="pName" required autocomplete="name"></div>
-        <div><label for="pEmail">Email <span class="req">*</span></label><input id="pEmail" type="email" required autocomplete="email"></div>
-        <div><label for="pPhone">Phone <span class="req">*</span></label><input id="pPhone" type="tel" autocomplete="tel" required></div>
-        <div><label for="cAge">Child’s age <span class="req">*</span></label><input id="cAge" type="number" min="4" max="18" required></div>
+                <div><label for="cAge">Child’s age <span class="req">*</span></label><input id="cAge" type="number" min="4" max="18" required></div>
         <div><label for="cName">Child’s first name <span class="req">*</span></label><input id="cName" required autocomplete="off"></div>
         <div><label for="fClass">Preferred class / age group <span class="req">*</span></label><select id="fClass" required><option value="">Select a class</option></select></div>
         <div class="full"><label for="fDate">Class date &amp; time <span class="req">*</span></label><select id="fDate"><option value="">Select a class first</option></select><div class="spots" id="formSpots" aria-live="polite" hidden></div></div>
@@ -518,7 +515,7 @@ function spotsHTML(k){
  if(!k)return "";
  if(!live)return `<span class="msg">Spot counts are loading. If they don’t appear, email or call us to check availability.</span>`;
  const n=left(k),pct=Math.round((n/CAPACITY)*100);
- const msg=n===0?"This class is full. Pick another date.":n<=LOW?"Almost full. Reserve soon.":"Plenty of room.";
+ const msg=n===0?"This class is full. Pick another date.":n<=2?"Only "+n+" left. Spots go to the first families to pay, and counts update about once an hour. If this date fills before your payment comes through, we’ll contact you about another date.":n<=LOW?"Almost full. Reserve soon.":"Plenty of room.";
  return `<div class="spots-line"><span>Spots left</span><span class="n">${n} of ${CAPACITY}</span></div><div class="meter" role="progressbar" aria-valuemin="0" aria-valuemax="${CAPACITY}" aria-valuenow="${n}" aria-label="Spots left"><i style="width:${pct}%"></i></div><span class="msg">${msg}</span>`;
 }
 function paintSpots(el,k){el.hidden=!k;el.className="spots"+(live&&k&&!left(k)?" full":live&&k&&left(k)<=LOW?" low":"");el.innerHTML=spotsHTML(k)}
@@ -589,7 +586,7 @@ document.getElementById("classGrid").addEventListener("click",e=>{
 const form=document.getElementById("inqForm"),err=document.getElementById("formErr");
 form.addEventListener("submit",e=>{e.preventDefault();
  const v=id=>document.getElementById(id).value.trim();
- const miss=[];if(!v("pName"))miss.push("your name");if(!/^\S+@\S+\.\S+$/.test(v("pEmail")))miss.push("a valid email");if(v("pPhone").replace(/\D/g,"").length<10)miss.push("a phone number");
+ const miss=[];
  const age=+v("cAge");if(!age||age<4||age>18)miss.push("your child’s age (4–18)");if(!v("cName"))miss.push("your child’s first name");if(!v("fClass"))miss.push("a class");else if(!v("fDate"))miss.push("a class date");
  if(miss.length){err.textContent="Please add "+miss.join(", ")+".";err.hidden=false;return}
  const k=v("fDate");
@@ -597,7 +594,7 @@ form.addEventListener("submit",e=>{e.preventDefault();
  err.hidden=true;
  const c=CLASSES.find(x=>x.id===v("fClass"));
  document.getElementById("heldMsg").textContent="Copy your class date, tap Pay, and paste the date at checkout along with your child’s first name. Spots go to the first families to pay, so please pay now to hold this date.";
- document.getElementById("resultText").textContent=[`Parent/guardian: ${v("pName")}`,`Email: ${v("pEmail")}`,v("pPhone")&&`Phone: ${v("pPhone")}`,`Child: ${v("cName")||"(not given)"}, age ${age}`,`Class: ${c.name} (${c.ages}) · $${c.price}`,`Date: ${k?ALL[k].label:"Flexible"}`,v("fNotes")&&`Notes: ${v("fNotes")}`].filter(Boolean).join("\n");
+ document.getElementById("resultText").textContent=[`Parent/guardian: (your name)`,`Phone: (your phone number)`,`Child: ${v("cName")||"(not given)"}, age ${age}`,`Class: ${c.name} (${c.ages}) · $${c.price}`,`Date: ${k?ALL[k].label:"Flexible"}`,v("fNotes")&&`Notes: ${v("fNotes")}`].filter(Boolean).join("\n");
  {const sr=document.getElementById("sendReq");if(sr)sr.href="mailto:troy.alex.aguirre@gmail.com?subject="+encodeURIComponent(`Class request: ${c.name} · ${k?ALL[k].label:"Flexible"}`)+"&body="+encodeURIComponent(document.getElementById("resultText").textContent);}
  const pb=document.getElementById("payBox");
  const dateTxt=k?ALL[k].label:"";
