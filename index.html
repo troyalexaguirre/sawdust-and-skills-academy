@@ -301,7 +301,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
       <div id="schedule" class="head" style="margin-bottom:24px">
         <span class="eyebrow">A little time. A lot to take home.</span>
         <h3 style="font-size:1.6rem">Class schedule &amp; pricing</h3>
-        <p class="lede">Classes for ages 4–7 are 1 hour. Classes for ages 8–18 are 2 hours. Choose an age group, then select a date and time. Classes run weekly from November 6, 2026, through January 31, 2027.</p>
+        <p class="lede">Classes for ages 4–7 are 1 hour. Classes for ages 8–18 are 2 hours. Choose an age group, then select a date and time. Classes run weekly from November 12, 2026, through January 31, 2027.</p>
       </div>
       <div class="classes" id="classGrid"></div>
       <p class="note">Projects are examples, adapted to each learner. Materials are prepared to fit each class; larger builds may use prepared parts or continue across sessions.</p>
@@ -314,12 +314,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
   <div class="wrap">
     <div class="weekly">
       <table>
-        <caption>Weekly pattern · Nov 6, 2026–Jan 31, 2027 · All times Eastern</caption>
+        <caption>Weekly pattern · Nov 12, 2026–Jan 31, 2027 · All times Eastern</caption>
         <thead><tr><th>Day</th><th>Time</th><th>Class</th></tr></thead>
         <tbody id="weeklyBody"></tbody>
       </table>
     </div>
-    <p class="note">No classes on Veterans Day (Wed, Nov 11), Thanksgiving weekend (Thu–Sat, Nov 26–28), Christmas (Thu–Sat, Dec 24–26), New Year’s Eve (Thu, Dec 31), or New Year’s Day (Fri, Jan 1). All classes are held at 5345 Virginia Beach Blvd, Virginia Beach, VA 23462.</p>
+    <p class="note">No classes on Thanksgiving weekend (Thu–Sat, Nov 26–28), Christmas (Thu–Sat, Dec 24–26), New Year’s Eve (Thu, Dec 31), or New Year’s Day (Fri, Jan 1). All classes are held at 5345 Virginia Beach Blvd, Virginia Beach, VA 23462.</p>
 
     <div id="manage" hidden>
       <div class="head" style="margin-bottom:8px">
@@ -453,7 +453,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
       <div class="head">
         <span class="eyebrow">Their next proud moment starts here</span>
         <h2>Let’s make something happen.</h2>
-        <p class="lede">Pick a class and an open date, then pay online to reserve your young maker’s spot. Only dates with spots left are shown. Weekly classes run November 6, 2026, through January 31, 2027, at 5345 Virginia Beach Blvd, Virginia Beach, VA 23462. No classes on holidays. Pay in full by card, Apple Pay, or Google Pay. Your spot is secured once payment is received, and we’ll email you a confirmation.</p>
+        <p class="lede">Pick a class and an open date, then pay online to reserve your young maker’s spot. Only dates with spots left are shown. Weekly classes run November 12, 2026, through January 31, 2027, at 5345 Virginia Beach Blvd, Virginia Beach, VA 23462. No classes on holidays. Pay in full by card, Apple Pay, or Google Pay. Your spot is secured once payment is received, and we’ll email you a confirmation.</p>
         <div class="contact" aria-label="Contact the organizer">
           <div class="contact-row"><span class="contact-k">Email</span><a class="contact-v" id="cEmail" href="mailto:hello@sawdustandskills.com">hello@sawdustandskills.com</a><button type="button" class="copy" data-copy="cEmail">Copy</button></div>
           <div class="contact-row"><span class="contact-k">Phone</span><a class="contact-v" id="cPhone" href="tel:+17579683972">(757) 968-3972</a><button type="button" class="copy" data-copy="cPhone">Copy</button></div>
@@ -507,7 +507,7 @@ const fmt=new Intl.DateTimeFormat("en-US",{weekday:"short",month:"short",day:"nu
 const startMin=t=>{const [a,b]=t.split("–");const m=a.match(/(\d+):(\d+)/);let h=+m[1]%12;if(/PM/.test(a)||(!/AM/.test(a)&&/PM/.test(b)))h+=12;return h*60+ +m[2]};
 /* Today in Virginia Beach time, so dates that have already started drop off the list. */
 function nowET(){const p=Object.fromEntries(new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(new Date()).map(x=>[x.type,x.value]));return {day:`${p.year}-${p.month}-${p.day}`,min:+p.hour*60+ +p.minute}}
-function datesFor(c){const out=[];for(let d=new Date(Date.UTC(2026,10,6));d<=new Date(Date.UTC(2027,0,31));d=new Date(d.getTime()+864e5)){for(const [dow,t] of c.slots){if(d.getUTCDay()===dow&&!HOLIDAYS.has(d.toISOString().slice(0,10)))out.push({key:c.id+"_"+d.toISOString().slice(0,10),day:d.toISOString().slice(0,10),start:startMin(t),label:`${fmt.format(d)} · ${t} ET`})}}return out}
+function datesFor(c){const out=[];for(let d=new Date(Date.UTC(2026,10,12));d<=new Date(Date.UTC(2027,0,31));d=new Date(d.getTime()+864e5)){for(const [dow,t] of c.slots){if(d.getUTCDay()===dow&&!HOLIDAYS.has(d.toISOString().slice(0,10)))out.push({key:c.id+"_"+d.toISOString().slice(0,10),day:d.toISOString().slice(0,10),start:startMin(t),label:`${fmt.format(d)} · ${t} ET`})}}return out}
 CLASSES.forEach(c=>c.dates=datesFor(c));
 const ALL={};CLASSES.forEach(c=>c.dates.forEach(s=>ALL[s.key]={...s,cls:c}));
 
@@ -541,7 +541,7 @@ document.getElementById("classGrid").innerHTML=CLASSES.map(c=>`
   <div class="spots" id="s-${c.id}" aria-live="polite" hidden></div>
   <div class="admin" id="a-${c.id}" hidden><span class="tag">Owner · enrolled</span><button type="button" data-adj="-1" aria-label="Remove one student">−</button><b>0</b><button type="button" data-adj="1" aria-label="Add one student">+</button></div>
   <a class="btn go" href="#interest" data-req="${c.id}">Reserve this class ↗</a>
-  ${c.pay?`<a class="paylink" href="${c.pay}" target="_blank" rel="noopener">Pay $${c.price} now with card or Apple Pay ↗</a><span class="paynote">At checkout, type your class date exactly as it appears in the date list above.</span>${c.pack?`<a class="paylink" href="${c.pack.pay}" target="_blank" rel="noopener">Booking 4 classes? Pay $${c.pack.price} for the 4-class pack ↗</a><span class="paynote">4-class pack: one child, 4 classes in this age group, all between Nov 6 and Jan 31. Pick 4 open dates, then list all 4 at checkout.</span>`:""}`:""}</div>
+  ${c.pay?`<a class="paylink" href="${c.pay}" target="_blank" rel="noopener">Pay $${c.price} now with card or Apple Pay ↗</a><span class="paynote">At checkout, type your class date exactly as it appears in the date list above.</span>${c.pack?`<a class="paylink" href="${c.pack.pay}" target="_blank" rel="noopener">Booking 4 classes? Pay $${c.pack.price} for the 4-class pack ↗</a><span class="paynote">4-class pack: one child, 4 classes in this age group, all between Nov 12 and Jan 31. Pick 4 open dates, then list all 4 at checkout.</span>`:""}`:""}</div>
  </article>`).join("");
 
 function paintTicket(c){
@@ -611,7 +611,7 @@ form.addEventListener("submit",e=>{e.preventDefault();
  {const sr=document.getElementById("sendReq");if(sr)sr.href="mailto:hello@sawdustandskills.com?subject="+encodeURIComponent(`Class request: ${c.name} · ${k?ALL[k].label:"Flexible"}`)+"&body="+encodeURIComponent(document.getElementById("resultText").textContent);}
  const pb=document.getElementById("payBox");
  const dateTxt=k?ALL[k].label:"";
- pb.innerHTML=c.pay?`${dateTxt?`<div class="datecopy"><span>At checkout, paste this into <b>Class date and time</b> exactly as shown:</span><code id="payDate">${dateTxt}</code><button type="button" class="copy" id="payDateCopy">Copy class date</button></div>`:`<span>At checkout, type your class date exactly as it appears in the date list, for example <b>Sat, Nov 7, 2026 · 9:30–10:30 AM ET</b>.</span>`}<a class="btn go" href="${c.pay}" target="_blank" rel="noopener">Pay $${c.price} with card or Apple Pay ↗</a><span>Your spot is secured once payment is received. Enter your child’s first name too. We’ll email you a confirmation after your payment comes through.</span>${c.pack?`<a class="btn" href="${c.pack.pay}" target="_blank" rel="noopener">Or pay $${c.pack.price} for a 4-class pack ↗</a><span>The pack covers 4 classes for one child between Nov 6 and Jan 31. Pick 4 open dates from the list, then list all 4 at checkout.</span>`:""}`:"";
+ pb.innerHTML=c.pay?`${dateTxt?`<div class="datecopy"><span>At checkout, paste this into <b>Class date and time</b> exactly as shown:</span><code id="payDate">${dateTxt}</code><button type="button" class="copy" id="payDateCopy">Copy class date</button></div>`:`<span>At checkout, type your class date exactly as it appears in the date list, for example <b>Sat, Nov 14, 2026 · 9:30–10:30 AM ET</b>.</span>`}<a class="btn go" href="${c.pay}" target="_blank" rel="noopener">Pay $${c.price} with card or Apple Pay ↗</a><span>Your spot is secured once payment is received. Enter your child’s first name too. We’ll email you a confirmation after your payment comes through.</span>${c.pack?`<a class="btn" href="${c.pack.pay}" target="_blank" rel="noopener">Or pay $${c.pack.price} for a 4-class pack ↗</a><span>The pack covers 4 classes for one child between Nov 12 and Jan 31. Pick 4 open dates from the list, then list all 4 at checkout.</span>`:""}`:"";
  const pdc=document.getElementById("payDateCopy");
  if(pdc)pdc.addEventListener("click",()=>{const el=document.getElementById("payDate");navigator.clipboard.writeText(el.textContent).then(()=>{pdc.textContent="Copied"}).catch(()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);pdc.textContent="Selected. Copy it"})});
  pb.hidden=false;
